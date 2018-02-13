@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C74420AA203328360068A6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74420A9203328360068A6CA /* AppDelegate.swift */; };
+		C74420AC203328360068A6CA /* FormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74420AB203328360068A6CA /* FormVC.swift */; };
+		C74420AF203328360068A6CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74420AD203328360068A6CA /* Main.storyboard */; };
+		C74420B1203328360068A6CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74420B0203328360068A6CA /* Assets.xcassets */; };
+		C74420B4203328360068A6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74420B2203328360068A6CA /* LaunchScreen.storyboard */; };
+		C74420BC20332CFD0068A6CA /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74420BB20332CFD0068A6CA /* ResultsVC.swift */; };
+		C74420BF20332DB60068A6CA /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74420BE20332DB60068A6CA /* CustomNavigationController.swift */; };
+		C74420C3203330A40068A6CA /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74420C2203330A40068A6CA /* UIColorExt.swift */; };
+		C74420C6203332D30068A6CA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74420C5203332D30068A6CA /* BaseViewController.swift */; };
+		C74420C92033441B0068A6CA /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74420C82033441B0068A6CA /* PaddingLabel.swift */; };
+		C74420CC203353530068A6CA /* DataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74420CB203353530068A6CA /* DataClass.swift */; };
+		C74420CE2033605A0068A6CA /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74420CD2033605A0068A6CA /* DataCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C74420A6203328360068A6CA /* Getir-BiTaksi Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Getir-BiTaksi Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C74420A9203328360068A6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C74420AB203328360068A6CA /* FormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormVC.swift; sourceTree = "<group>"; };
+		C74420AE203328360068A6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C74420B0203328360068A6CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C74420B3203328360068A6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C74420B5203328360068A6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C74420BB20332CFD0068A6CA /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
+		C74420BE20332DB60068A6CA /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		C74420C2203330A40068A6CA /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		C74420C5203332D30068A6CA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C74420C82033441B0068A6CA /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		C74420CB203353530068A6CA /* DataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClass.swift; sourceTree = "<group>"; };
+		C74420CD2033605A0068A6CA /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C74420A3203328360068A6CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C744209D203328360068A6CA = {
+			isa = PBXGroup;
+			children = (
+				C74420A8203328360068A6CA /* Getir-BiTaksi Hackathon */,
+				C74420A7203328360068A6CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C74420A7203328360068A6CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C74420A6203328360068A6CA /* Getir-BiTaksi Hackathon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C74420A8203328360068A6CA /* Getir-BiTaksi Hackathon */ = {
+			isa = PBXGroup;
+			children = (
+				C74420A9203328360068A6CA /* AppDelegate.swift */,
+				C74420AD203328360068A6CA /* Main.storyboard */,
+				C74420CB203353530068A6CA /* DataClass.swift */,
+				C74420C72033330A0068A6CA /* Custom Navigation Controller */,
+				C74420C1203330940068A6CA /* Extensions */,
+				C74420C4203332B30068A6CA /* Base View Controller */,
+				C74420CF2033605F0068A6CA /* Cells */,
+				C74420CA203344DB0068A6CA /* UILabel Padding */,
+				C74420BD20332D0C0068A6CA /* View Controllers */,
+				C74420B0203328360068A6CA /* Assets.xcassets */,
+				C74420B2203328360068A6CA /* LaunchScreen.storyboard */,
+				C74420B5203328360068A6CA /* Info.plist */,
+			);
+			path = "Getir-BiTaksi Hackathon";
+			sourceTree = "<group>";
+		};
+		C74420BD20332D0C0068A6CA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C74420AB203328360068A6CA /* FormVC.swift */,
+				C74420BB20332CFD0068A6CA /* ResultsVC.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C74420C1203330940068A6CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C74420C2203330A40068A6CA /* UIColorExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C74420C4203332B30068A6CA /* Base View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C74420C5203332D30068A6CA /* BaseViewController.swift */,
+			);
+			path = "Base View Controller";
+			sourceTree = "<group>";
+		};
+		C74420C72033330A0068A6CA /* Custom Navigation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C74420BE20332DB60068A6CA /* CustomNavigationController.swift */,
+			);
+			path = "Custom Navigation Controller";
+			sourceTree = "<group>";
+		};
+		C74420CA203344DB0068A6CA /* UILabel Padding */ = {
+			isa = PBXGroup;
+			children = (
+				C74420C82033441B0068A6CA /* PaddingLabel.swift */,
+			);
+			path = "UILabel Padding";
+			sourceTree = "<group>";
+		};
+		C74420CF2033605F0068A6CA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C74420CD2033605A0068A6CA /* DataCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C74420A5203328360068A6CA /* Getir-BiTaksi Hackathon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C74420B8203328360068A6CA /* Build configuration list for PBXNativeTarget "Getir-BiTaksi Hackathon" */;
+			buildPhases = (
+				C74420A2203328360068A6CA /* Sources */,
+				C74420A3203328360068A6CA /* Frameworks */,
+				C74420A4203328360068A6CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Getir-BiTaksi Hackathon";
+			productName = "Getir-BiTaksi Hackathon";
+			productReference = C74420A6203328360068A6CA /* Getir-BiTaksi Hackathon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C744209E203328360068A6CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Getir de getirek";
+				TargetAttributes = {
+					C74420A5203328360068A6CA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C74420A1203328360068A6CA /* Build configuration list for PBXProject "Getir-BiTaksi Hackathon" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C744209D203328360068A6CA;
+			productRefGroup = C74420A7203328360068A6CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C74420A5203328360068A6CA /* Getir-BiTaksi Hackathon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C74420A4203328360068A6CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C74420B4203328360068A6CA /* LaunchScreen.storyboard in Resources */,
+				C74420B1203328360068A6CA /* Assets.xcassets in Resources */,
+				C74420AF203328360068A6CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C74420A2203328360068A6CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C74420BF20332DB60068A6CA /* CustomNavigationController.swift in Sources */,
+				C74420C92033441B0068A6CA /* PaddingLabel.swift in Sources */,
+				C74420CC203353530068A6CA /* DataClass.swift in Sources */,
+				C74420AC203328360068A6CA /* FormVC.swift in Sources */,
+				C74420BC20332CFD0068A6CA /* ResultsVC.swift in Sources */,
+				C74420C3203330A40068A6CA /* UIColorExt.swift in Sources */,
+				C74420AA203328360068A6CA /* AppDelegate.swift in Sources */,
+				C74420CE2033605A0068A6CA /* DataCell.swift in Sources */,
+				C74420C6203332D30068A6CA /* BaseViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C74420AD203328360068A6CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C74420AE203328360068A6CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C74420B2203328360068A6CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C74420B3203328360068A6CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C74420B6203328360068A6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C74420B7203328360068A6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C74420B9203328360068A6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95T4L3PGH6;
+				INFOPLIST_FILE = "Getir-BiTaksi Hackathon/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "GDG.Getir-BiTaksi-Hackathon";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C74420BA203328360068A6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95T4L3PGH6;
+				INFOPLIST_FILE = "Getir-BiTaksi Hackathon/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "GDG.Getir-BiTaksi-Hackathon";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C74420A1203328360068A6CA /* Build configuration list for PBXProject "Getir-BiTaksi Hackathon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C74420B6203328360068A6CA /* Debug */,
+				C74420B7203328360068A6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C74420B8203328360068A6CA /* Build configuration list for PBXNativeTarget "Getir-BiTaksi Hackathon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C74420B9203328360068A6CA /* Debug */,
+				C74420BA203328360068A6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C744209E203328360068A6CA /* Project object */;
+}
