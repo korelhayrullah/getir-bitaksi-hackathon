@@ -22,7 +22,7 @@ class DataCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = UIColor.getirBitaksiHackatonBlue
+        backgroundColor = UIColor.clear
     }
     
     func setLabelColors(toColor: UIColor){

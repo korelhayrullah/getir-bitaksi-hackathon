@@ -193,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2lq-0T-35N">
-                                <rect key="frame" x="16" y="113" width="343" height="554"/>
+                                <rect key="frame" x="16" y="80" width="343" height="486"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DataCell" rowHeight="157" id="2N3-dU-MlQ" customClass="DataCell" customModule="Getir_BiTaksi_Hackathon" customModuleProvider="target">
@@ -275,10 +275,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fee-lL-5He" firstAttribute="top" secondItem="eG9-zL-8W3" secondAttribute="top" constant="12" id="GXg-zx-p2L"/>
-                                                <constraint firstItem="fee-lL-5He" firstAttribute="leading" secondItem="eG9-zL-8W3" secondAttribute="leading" constant="10" id="Ldc-et-5Gh"/>
-                                                <constraint firstAttribute="trailing" secondItem="fee-lL-5He" secondAttribute="trailing" constant="10" id="MwV-fc-9mX"/>
-                                                <constraint firstAttribute="bottom" secondItem="fee-lL-5He" secondAttribute="bottom" constant="11.5" id="wla-ae-rSO"/>
+                                                <constraint firstAttribute="trailing" secondItem="fee-lL-5He" secondAttribute="trailing" constant="10" id="JZ2-se-oo9"/>
+                                                <constraint firstAttribute="bottom" secondItem="fee-lL-5He" secondAttribute="bottom" constant="11.5" id="O1t-PV-iID"/>
+                                                <constraint firstItem="fee-lL-5He" firstAttribute="top" secondItem="eG9-zL-8W3" secondAttribute="top" constant="12" id="Tlk-8Q-qaR"/>
+                                                <constraint firstItem="fee-lL-5He" firstAttribute="leading" secondItem="eG9-zL-8W3" secondAttribute="leading" constant="10" id="rnA-e0-mZI"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -292,9 +292,9 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="SzB-Bd-Ctv">
-                                <rect key="frame" x="16" y="80" width="343" height="25"/>
+                                <rect key="frame" x="16" y="622" width="343" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="EYD-rm-fbN"/>
+                                    <constraint firstAttribute="height" constant="25" id="TbL-M4-6ab"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="In total of #">
@@ -307,16 +307,41 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pDz-8J-9Bd">
+                                <rect key="frame" x="16" y="574" width="343" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvh-Sf-bnE">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="40"/>
+                                        <state key="normal" title="Previous"/>
+                                        <connections>
+                                            <action selector="previousButtonPressed:" destination="WYS-FC-QE0" eventType="touchUpInside" id="F2I-1M-OeB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NS-rY-abB">
+                                        <rect key="frame" x="175.5" y="0.0" width="167.5" height="40"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="WYS-FC-QE0" eventType="touchUpInside" id="hK3-K2-ZoB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="N0B-uD-V1c"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.4049091339" green="0.56298738719999997" blue="0.83276158570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="SzB-Bd-Ctv" firstAttribute="top" secondItem="scI-6q-lNZ" secondAttribute="top" constant="16" id="1kj-4k-5eJ"/>
-                            <constraint firstItem="scI-6q-lNZ" firstAttribute="trailing" secondItem="SzB-Bd-Ctv" secondAttribute="trailing" constant="16" id="4Ox-pR-WIa"/>
-                            <constraint firstAttribute="bottom" secondItem="2lq-0T-35N" secondAttribute="bottom" id="I0d-zx-cW4"/>
-                            <constraint firstItem="2lq-0T-35N" firstAttribute="leading" secondItem="scI-6q-lNZ" secondAttribute="leading" constant="16" id="PJk-4F-zRf"/>
-                            <constraint firstItem="2lq-0T-35N" firstAttribute="top" secondItem="SzB-Bd-Ctv" secondAttribute="bottom" constant="8" id="Vcf-Su-Tu4"/>
-                            <constraint firstItem="scI-6q-lNZ" firstAttribute="trailing" secondItem="2lq-0T-35N" secondAttribute="trailing" constant="16" id="hRB-fH-6o4"/>
-                            <constraint firstItem="SzB-Bd-Ctv" firstAttribute="leading" secondItem="scI-6q-lNZ" secondAttribute="leading" constant="16" id="vKi-CE-DtW"/>
+                            <constraint firstItem="pDz-8J-9Bd" firstAttribute="top" secondItem="2lq-0T-35N" secondAttribute="bottom" constant="8" id="2iZ-qR-dq4"/>
+                            <constraint firstItem="scI-6q-lNZ" firstAttribute="trailing" secondItem="SzB-Bd-Ctv" secondAttribute="trailing" constant="16" id="9eQ-2K-sYT"/>
+                            <constraint firstItem="SzB-Bd-Ctv" firstAttribute="top" secondItem="pDz-8J-9Bd" secondAttribute="bottom" constant="8" id="GBl-27-kXf"/>
+                            <constraint firstItem="2lq-0T-35N" firstAttribute="top" secondItem="scI-6q-lNZ" secondAttribute="top" constant="16" id="LEn-Ph-4bf"/>
+                            <constraint firstItem="scI-6q-lNZ" firstAttribute="bottom" secondItem="SzB-Bd-Ctv" secondAttribute="bottom" constant="20" id="MZ6-a3-kmQ"/>
+                            <constraint firstItem="pDz-8J-9Bd" firstAttribute="leading" secondItem="scI-6q-lNZ" secondAttribute="leading" constant="16" id="V99-of-X1D"/>
+                            <constraint firstItem="2lq-0T-35N" firstAttribute="leading" secondItem="scI-6q-lNZ" secondAttribute="leading" constant="16" id="hW0-dF-RYr"/>
+                            <constraint firstItem="scI-6q-lNZ" firstAttribute="trailing" secondItem="2lq-0T-35N" secondAttribute="trailing" constant="16" id="i0k-bf-dXZ"/>
+                            <constraint firstItem="SzB-Bd-Ctv" firstAttribute="leading" secondItem="scI-6q-lNZ" secondAttribute="leading" constant="16" id="qT6-jf-lXC"/>
+                            <constraint firstItem="scI-6q-lNZ" firstAttribute="trailing" secondItem="pDz-8J-9Bd" secondAttribute="trailing" constant="16" id="zZo-pH-ab1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="scI-6q-lNZ"/>
                     </view>
@@ -324,6 +349,8 @@
                     <connections>
                         <outlet property="dataCountlabel" destination="SzB-Bd-Ctv" id="twP-QP-BBi"/>
                         <outlet property="dataTableView" destination="2lq-0T-35N" id="peC-vt-ih7"/>
+                        <outlet property="nextButton" destination="8NS-rY-abB" id="z7u-an-aP0"/>
+                        <outlet property="previousButton" destination="zvh-Sf-bnE" id="AVW-cC-OiK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhn-Zl-srM" userLabel="First Responder" sceneMemberID="firstResponder"/>

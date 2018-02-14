@@ -11,6 +11,8 @@ import UIKit
 class FormVC: BaseViewController, UITextFieldDelegate {
     
     //MARK: Properties
+    
+    //IBOutlets
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var minCountTextField: UITextField!
@@ -18,22 +20,23 @@ class FormVC: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var postFormButton: UIButton!
     
-    var currentDate = Date()
-    var currentlyActiveLabel: Int = -1
-    var alert: UIAlertController!
+    //Variables
     var responses = [Data]()
+    var currentDate = Date()//the datePicker will always display the current date
+    var currentlyActiveLabel: Int = -1 //initially it is -1
+    var alert: UIAlertController!
     
     let activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView()
         indicator.translatesAutoresizingMaskIntoConstraints = false
-        indicator.hidesWhenStopped = true
         indicator.activityIndicatorViewStyle = .white
+        indicator.hidesWhenStopped = true
         return indicator
     }()
     
-    lazy var overView: UIView = {
+    lazy var loadingView: UIView = {
         let view = UIView(frame: self.view.frame)
-        view.backgroundColor = UIColor.getirBitaksiHackatonOrange
+        view.backgroundColor = UIColor(white: 0, alpha: 0.5)
         view.addSubview(activityIndicator)
         NSLayoutConstraint.activate([
             activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -46,36 +49,36 @@ class FormVC: BaseViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(overView)
+        view.addSubview(loadingView)
+        
         //setting the UI elements
+        
         navigationItem.title = "Form"
         setLabels()
         setDatePicker()
         setTextFields()
         setButton()
+        
         minCountTextField.delegate = self
         maxCountTextField.delegate = self
+        
+        //initially datePicker is hidden
         datePicker.alpha = 0
         
-        //alert
+        //setting the alert
         alert = UIAlertController(title: "Upsss!", message: "You cannot leave the fields blank.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        overView.isHidden = true
+        //the view, labels and fields are initially hidden and empty (can be changed according to willing)
+        loadingView.isHidden = true
         activityIndicator.isHidden = true
         startDateLabel.text = ""
         endDateLabel.text = ""
         minCountTextField.text = ""
         maxCountTextField.text = ""
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        overView.isHidden = false
     }
     
     //MARK: Settings
@@ -88,10 +91,10 @@ class FormVC: BaseViewController, UITextFieldDelegate {
         startDateLabel.tag = 0
         startDateLabel.layer.borderWidth = 0.3
         startDateLabel.layer.borderColor = UIColor.lightGray.cgColor
-        let tapGestureRecognizer1 = UITapGestureRecognizer()
-        tapGestureRecognizer1.addTarget(self, action: #selector(chooseDate(_:)))
-        tapGestureRecognizer1.numberOfTapsRequired = 1
-        startDateLabel.addGestureRecognizer(tapGestureRecognizer1)
+        let tapGestureRecognizerForStartDateLabel = UITapGestureRecognizer()
+        tapGestureRecognizerForStartDateLabel.addTarget(self, action: #selector(chooseDate(_:)))
+        tapGestureRecognizerForStartDateLabel.numberOfTapsRequired = 1
+        startDateLabel.addGestureRecognizer(tapGestureRecognizerForStartDateLabel)
         
         endDateLabel.layer.cornerRadius = 5
         endDateLabel.layer.masksToBounds = true
@@ -100,32 +103,37 @@ class FormVC: BaseViewController, UITextFieldDelegate {
         endDateLabel.tag = 1
         endDateLabel.layer.borderWidth = 0.3
         endDateLabel.layer.borderColor = UIColor.lightGray.cgColor
-        let tapGestureRecognizer2 = UITapGestureRecognizer()
-        tapGestureRecognizer2.addTarget(self, action: #selector(chooseDate(_:)))
-        tapGestureRecognizer2.numberOfTapsRequired = 1
-        endDateLabel.addGestureRecognizer(tapGestureRecognizer2)
+        let tapGestureRecognizerForEndDateLabel = UITapGestureRecognizer()
+        tapGestureRecognizerForEndDateLabel.addTarget(self, action: #selector(chooseDate(_:)))
+        tapGestureRecognizerForEndDateLabel.numberOfTapsRequired = 1
+        endDateLabel.addGestureRecognizer(tapGestureRecognizerForEndDateLabel)
     }
     
     private func setTextFields(){
+        //note: keyboardType as numberPad gives a warning, but doesn't change the working behaviour
+        
         minCountTextField.keyboardType = .numberPad
         minCountTextField.textColor = UIColor.getirBitaksiHackatonBlue
         minCountTextField.tintColor = minCountTextField.textColor
+        minCountTextField.clearButtonMode = .whileEditing
         
         maxCountTextField.keyboardType = .numberPad
         maxCountTextField.textColor = UIColor.getirBitaksiHackatonBlue
         maxCountTextField.tintColor = maxCountTextField.textColor
+        maxCountTextField.clearButtonMode = .whileEditing
     }
     
     private func setDatePicker(){
-        datePicker.setValue(UIColor.getirBitaksiHackatonBlue, forKey: "textColor")
+        datePicker.setValue(UIColor.getirBitaksiHackatonOrange, forKey: "textColor")
         datePicker.date = currentDate
         datePicker.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
     }
     
     private func setButton(){
-        let attributedString =  NSMutableAttributedString(string: "Post Form", attributes: [NSAttributedStringKey.font: UIFont(name: "Avenir Next", size: 15)!, NSAttributedStringKey.foregroundColor: UIColor.getirBitaksiHackatonOrange])
-        postFormButton.setAttributedTitle(attributedString, for: .normal)
-        postFormButton.backgroundColor = UIColor.getirBitaksiHackatonBlue
+        let attributedButtonString =  NSMutableAttributedString(string: "Post Form", attributes: [NSAttributedStringKey.font: UIFont(name: "Avenir Next", size: 15)!, NSAttributedStringKey.foregroundColor: UIColor.getirBitaksiHackatonBlue])
+        
+        postFormButton.setAttributedTitle(attributedButtonString, for: .normal)
+        postFormButton.backgroundColor = UIColor.getirBitaksiHackatonOrange
         postFormButton.layer.shadowColor = UIColor.getirBitaksiHackatonBlue.cgColor
         postFormButton.layer.shadowOffset = CGSize(width: 0, height: 2)
         postFormButton.layer.shadowOpacity = 1
@@ -157,13 +165,18 @@ class FormVC: BaseViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
     }
     
+    internal func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
     //MARK: Segue Preparation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let resultsVC = segue.destination as? ResultsVC else { return }
-        resultsVC.responses = responses
+        if segue.identifier == "ResultsVCSegue"{
+            guard let resultsVC = segue.destination as? ResultsVC else { return }
+            resultsVC.responses = responses
+        }
     }
-    
     
     //MARK: Actions
     
@@ -197,10 +210,10 @@ class FormVC: BaseViewController, UITextFieldDelegate {
     @IBAction func postFormButtonPressed(_ sender: UIButton) {
         if startDateLabel.text != "" && endDateLabel.text != "" && minCountTextField.text != "" && maxCountTextField.text != ""{
             
-            overView.isHidden = false
+            //it will start the request then get the loading view in front and show loading indicator
+            loadingView.isHidden = false
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
-            
             
             let url = URL(string: "https://getir-bitaksi-hackathon.herokuapp.com/searchRecords")!
             var request = URLRequest(url: url)
@@ -234,7 +247,6 @@ class FormVC: BaseViewController, UITextFieldDelegate {
                     if let json = json{
                         if let recordsValues = json.value(forKey: "records") as? NSArray{
                             self.responses.removeAll()
-                            var counter = 0
                             
                             for values in recordsValues{
                                 guard let dictValue = values as? NSDictionary else { return }
@@ -250,11 +262,6 @@ class FormVC: BaseViewController, UITextFieldDelegate {
                                 
                                 let data = Data(id: id, key: key, value: value, createdAt: createdAt, totalCount: totalCount)
                                 self.responses.append(data)
-                                
-                                counter += 1
-                                if counter == 10{
-                                    break
-                                }
                             }
                         }
                         DispatchQueue.main.async {
@@ -269,6 +276,7 @@ class FormVC: BaseViewController, UITextFieldDelegate {
             }
             task.resume()
         } else {
+            //showing alert
             present(alert, animated: true, completion: nil)
         }
     }

@@ -12,6 +12,8 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.getirBitaksiHackatonOrange
+        //since it is the getir-bitaksi-hackathon. I took the background image from www.getir.com.
+        //I do not own or distribute the background image. It will only for this application which it will not be distributed unless your will.
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "getir-background-img")!)
     }
 }

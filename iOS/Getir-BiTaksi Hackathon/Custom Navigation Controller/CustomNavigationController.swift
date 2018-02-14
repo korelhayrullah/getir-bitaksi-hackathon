@@ -13,8 +13,8 @@ class CustomNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.barTintColor = UIColor.getirBitaksiHackatonBlue
-        navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "AvenirNext-DemiBold", size: 18)!, NSAttributedStringKey.foregroundColor: UIColor.white]
-        navigationBar.tintColor = UIColor.white
+        navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "AvenirNext-DemiBold", size: 18)!, NSAttributedStringKey.foregroundColor: UIColor.getirBitaksiHackatonOrange]
+        navigationBar.tintColor = UIColor.getirBitaksiHackatonOrange
         
     }
 }
